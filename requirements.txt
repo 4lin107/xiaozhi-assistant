@@ -1,0 +1,39 @@
+# 语音助手依赖库
+
+# 核心库
+python>=3.8
+
+# 语音识别
+speechrecognition
+pyaudio  # 用于音频输入
+
+# 中文分词
+jieba
+
+# 自然语言处理
+nltk
+spacy
+scikit-learn
+numpy
+
+# 语音合成
+pyttsx3
+
+# HTTP请求
+requests
+flask  # 用于创建Web API服务
+kivy  # 用于创建跨平台移动应用
+kivymd  # Material Design风格的Kivy组件
+
+# GUI界面（可选）
+pyside2  # 或pyqt5
+
+# 数据存储
+pymongo  # 可选，用于MongoDB
+
+# 配置管理
+python-dotenv
+
+# 开发工具
+pytest  # 测试框架
+flake8  # 代码检查工具

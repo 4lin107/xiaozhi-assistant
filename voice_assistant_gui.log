@@ -1,0 +1,279 @@
+2025-12-04 05:43:44,150 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 05:53:28,025 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 05:53:43,041 - src.ui.simple_gui - INFO - 用户输入: 南宁气温, 助手响应: 您说的是: 南宁气温
+2025-12-04 05:54:10,303 - src.ui.simple_gui - INFO - 用户输入: 现在南宁的气温是, 助手响应: 您说的是: 现在南宁的气温是
+2025-12-04 06:10:11,640 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 06:10:24,129 - src.ui.simple_gui - INFO - 用户输入: 现在南宁的天气, 助手响应: 您说的是: 现在南宁的天气
+2025-12-04 06:10:45,891 - src.ui.simple_gui - INFO - 用户输入: 现在南宁的天气是, 助手响应: 您说的是: 现在南宁的天气是
+2025-12-04 18:18:10,464 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 18:18:28,593 - src.ui.simple_gui - INFO - 用户输入: 现在南宁的气温是多少, 助手响应: 您说的是: 现在南宁的气温是多少
+2025-12-04 18:18:42,677 - src.ui.simple_gui - INFO - 用户输入: 现在的时间是？, 助手响应: 您说的是: 现在的时间是？
+2025-12-04 18:33:24,630 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 18:33:25,590 - src.security.security_manager - INFO - 用户角色信息加载完成
+2025-12-04 18:33:25,590 - src.dialogue_manager.dialogue_manager - INFO - 对话历史数据库初始化成功
+2025-12-04 18:33:26,817 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:33:26,817 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:33:26,817 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:33:26,817 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:33:43,084 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 南宁现在的天气是
+2025-12-04 18:33:43,084 - src.nlp.nlp_processor - INFO - _process_internal方法被调用，输入文本: 南宁现在的天气是
+2025-12-04 18:33:43,084 - src.nlp.nlp_processor - INFO - 文本预处理结果: 南宁现在的天气是
+2025-12-04 18:33:43,084 - src.nlp.nlp_processor - INFO - 意图识别结果: weather
+2025-12-04 18:33:43,084 - src.nlp.nlp_processor - INFO - 实体提取结果: [('city', '南宁')]
+2025-12-04 18:33:43,084 - src.nlp.nlp_processor - INFO - 实体提取结果: [('city', '南宁')]
+2025-12-04 18:33:43,084 - src.nlp.nlp_processor - INFO - _process_internal方法返回结果: ('weather', [('city', '南宁')]), 类型: <class 'tuple'>
+2025-12-04 18:33:43,084 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: weather, 实体: [('city', '南宁')], 会话ID: fd6ac4e6-7737-4a53-a33e-e3bd344de222
+2025-12-04 18:33:43,084 - src.api_integration.api_integrator - INFO - 获取天气信息 - 城市: 南宁, 时间: None
+2025-12-04 18:33:43,487 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': 'fd6ac4e6-7737-4a53-a33e-e3bd344de222', 'last_intent': 'weather', 'last_entities': [('city', '南宁')], 'last_response': '南宁今日4日（今天）天气：阴，温度：14℃，风力：<3级', 'topic': None, 'conversation_turns': 1, 'pending_questions': [], 'memory': {'preferred_city': '南宁', 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': ['weather'], 'user_name': None}, 'conversation_topic': 'weather', 'topic_turns': 1, 'start_time': datetime.datetime(2025, 12, 4, 18, 33, 25, 590963)}
+2025-12-04 18:33:43,566 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-04 18:33:43,566 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 南宁今日4日（今天）天气：阴，温度：14℃，风力：<3级
+2025-12-04 18:33:43,588 - src.ui.simple_gui - INFO - 用户输入: 南宁现在的天气是, 助手响应: 南宁今日4日（今天）天气：阴，温度：14℃，风力：<3级
+2025-12-04 18:34:00,209 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 今天星期几？
+2025-12-04 18:34:00,209 - src.nlp.nlp_processor - INFO - _process_internal方法被调用，输入文本: 今天星期几？
+2025-12-04 18:34:00,209 - src.nlp.nlp_processor - INFO - 文本预处理结果: 今天星期几？
+2025-12-04 18:34:00,209 - src.nlp.nlp_processor - INFO - 意图识别结果: time
+2025-12-04 18:34:00,209 - src.nlp.nlp_processor - INFO - 实体提取结果: [('time', '今天')]
+2025-12-04 18:34:00,209 - src.nlp.nlp_processor - INFO - 实体提取结果: [('time', '今天')]
+2025-12-04 18:34:00,209 - src.nlp.nlp_processor - INFO - _process_internal方法返回结果: ('time', [('time', '今天')]), 类型: <class 'tuple'>
+2025-12-04 18:34:00,209 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: time, 实体: [('time', '今天')], 会话ID: fd6ac4e6-7737-4a53-a33e-e3bd344de222
+2025-12-04 18:34:00,209 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': 'fd6ac4e6-7737-4a53-a33e-e3bd344de222', 'last_intent': 'time', 'last_entities': [('time', '今天')], 'last_response': '现在的时间是 18:34:00', 'topic': None, 'conversation_turns': 2, 'pending_questions': [], 'memory': {'preferred_city': '南宁', 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': ['weather', 'time'], 'user_name': None}, 'conversation_topic': 'time', 'topic_turns': 1, 'start_time': datetime.datetime(2025, 12, 4, 18, 33, 25, 590963)}
+2025-12-04 18:34:00,224 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-04 18:34:00,224 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 现在的时间是 18:34:00
+2025-12-04 18:34:00,237 - src.ui.simple_gui - INFO - 用户输入: 今天星期几？, 助手响应: 现在的时间是 18:34:00
+2025-12-04 18:38:03,461 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 今天星期几
+2025-12-04 18:38:03,461 - src.nlp.nlp_processor - INFO - _process_internal方法被调用，输入文本: 今天星期几
+2025-12-04 18:38:03,461 - src.nlp.nlp_processor - INFO - 文本预处理结果: 今天星期几
+2025-12-04 18:38:03,462 - src.nlp.nlp_processor - INFO - 意图识别结果: time
+2025-12-04 18:38:03,462 - src.nlp.nlp_processor - INFO - 实体提取结果: [('time', '今天')]
+2025-12-04 18:38:03,462 - src.nlp.nlp_processor - INFO - 实体提取结果: [('time', '今天')]
+2025-12-04 18:38:03,462 - src.nlp.nlp_processor - INFO - _process_internal方法返回结果: ('time', [('time', '今天')]), 类型: <class 'tuple'>
+2025-12-04 18:38:03,462 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: time, 实体: [('time', '今天')], 会话ID: fd6ac4e6-7737-4a53-a33e-e3bd344de222
+2025-12-04 18:38:03,462 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': 'fd6ac4e6-7737-4a53-a33e-e3bd344de222', 'last_intent': 'time', 'last_entities': [('time', '今天')], 'last_response': '现在的时间是 18:38:03', 'topic': None, 'conversation_turns': 3, 'pending_questions': [], 'memory': {'preferred_city': '南宁', 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': ['weather', 'time'], 'user_name': None}, 'conversation_topic': 'time', 'topic_turns': 2, 'start_time': datetime.datetime(2025, 12, 4, 18, 33, 25, 590963)}
+2025-12-04 18:38:03,473 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-04 18:38:03,473 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 现在的时间是 18:38:03
+2025-12-04 18:38:03,480 - src.ui.simple_gui - INFO - 用户输入: 今天星期几, 助手响应: 现在的时间是 18:38:03
+2025-12-04 18:38:16,514 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 18:38:17,323 - src.security.security_manager - INFO - 用户角色信息加载完成
+2025-12-04 18:38:17,323 - src.dialogue_manager.dialogue_manager - INFO - 对话历史数据库初始化成功
+2025-12-04 18:38:17,879 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:38:17,879 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:38:17,879 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:38:17,879 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:38:28,915 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 今天星期几》
+2025-12-04 18:38:28,915 - src.nlp.nlp_processor - INFO - _process_internal方法被调用，输入文本: 今天星期几》
+2025-12-04 18:38:28,915 - src.nlp.nlp_processor - INFO - 文本预处理结果: 今天星期几》
+2025-12-04 18:38:28,915 - src.nlp.nlp_processor - INFO - 意图识别结果: date
+2025-12-04 18:38:28,915 - src.nlp.nlp_processor - INFO - 实体提取结果: [('time', '今天')]
+2025-12-04 18:38:28,915 - src.nlp.nlp_processor - INFO - 实体提取结果: [('time', '今天')]
+2025-12-04 18:38:28,915 - src.nlp.nlp_processor - INFO - _process_internal方法返回结果: ('date', [('time', '今天')]), 类型: <class 'tuple'>
+2025-12-04 18:38:28,915 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: date, 实体: [('time', '今天')], 会话ID: 47123187-85f8-44fd-8c03-aa9fed8e1b93
+2025-12-04 18:38:28,915 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': '47123187-85f8-44fd-8c03-aa9fed8e1b93', 'last_intent': 'date', 'last_entities': [('time', '今天')], 'last_response': '今天是 2025年12月04日，星期四', 'topic': None, 'conversation_turns': 1, 'pending_questions': [], 'memory': {'preferred_city': None, 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': ['date'], 'user_name': None}, 'conversation_topic': 'date', 'topic_turns': 1, 'start_time': datetime.datetime(2025, 12, 4, 18, 38, 17, 326002)}
+2025-12-04 18:38:28,965 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-04 18:38:28,965 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 今天是 2025年12月04日，星期四
+2025-12-04 18:38:28,979 - src.ui.simple_gui - INFO - 用户输入: 今天星期几》, 助手响应: 今天是 2025年12月04日，星期四
+2025-12-04 18:41:23,074 - __main__ - INFO - 启动语音助手GUI
+2025-12-04 18:41:23,135 - __main__ - ERROR - GUI启动失败: unknown option "-bordercolor"
+2025-12-04 18:41:46,345 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 18:41:46,388 - src.ui.simple_gui - ERROR - GUI启动失败: unknown option "-bordercolor"
+2025-12-04 18:42:33,407 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 18:42:33,455 - src.ui.simple_gui - ERROR - GUI启动失败: unknown option "-background"
+2025-12-04 18:42:52,059 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 18:42:52,107 - src.ui.simple_gui - ERROR - GUI启动失败: unknown option "-bg"
+2025-12-04 18:43:40,982 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 18:43:41,936 - src.security.security_manager - INFO - 用户角色信息加载完成
+2025-12-04 18:43:41,936 - src.dialogue_manager.dialogue_manager - INFO - 对话历史数据库初始化成功
+2025-12-04 18:43:42,411 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:43:42,411 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:43:42,411 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:43:42,411 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:44:31,705 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 18:44:32,464 - src.security.security_manager - INFO - 用户角色信息加载完成
+2025-12-04 18:44:32,464 - src.dialogue_manager.dialogue_manager - INFO - 对话历史数据库初始化成功
+2025-12-04 18:44:32,962 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:44:32,962 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:44:32,962 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:44:32,962 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:44:55,139 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 打开酷狗
+2025-12-04 18:44:55,139 - src.nlp.nlp_processor - INFO - _process_internal方法被调用，输入文本: 打开酷狗
+2025-12-04 18:44:55,139 - src.nlp.nlp_processor - INFO - 文本预处理结果: 打开酷狗
+2025-12-04 18:44:55,142 - src.nlp.nlp_processor - INFO - 意图识别结果: None
+2025-12-04 18:44:55,142 - src.nlp.nlp_processor - INFO - 实体提取结果: [('app_name', '酷狗')]
+2025-12-04 18:44:55,142 - src.nlp.nlp_processor - INFO - 实体提取结果: [('app_name', '酷狗')]
+2025-12-04 18:44:55,142 - src.nlp.nlp_processor - INFO - _process_internal方法返回结果: (None, [('app_name', '酷狗')]), 类型: <class 'tuple'>
+2025-12-04 18:44:55,142 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: None, 实体: [('app_name', '酷狗')], 会话ID: fc22cbd2-8240-45f9-8cc7-a5cec769390c
+2025-12-04 18:44:55,142 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': 'fc22cbd2-8240-45f9-8cc7-a5cec769390c', 'last_intent': None, 'last_entities': [('app_name', '酷狗')], 'last_response': '我还在学习中，这个问题有点难倒我了。', 'topic': None, 'conversation_turns': 1, 'pending_questions': [], 'memory': {'preferred_city': None, 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': [], 'user_name': None}, 'conversation_topic': None, 'topic_turns': 0, 'start_time': datetime.datetime(2025, 12, 4, 18, 44, 32, 480665)}
+2025-12-04 18:44:55,189 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-04 18:44:55,189 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 我还在学习中，这个问题有点难倒我了。
+2025-12-04 18:44:55,200 - src.ui.simple_gui - INFO - 用户输入: 打开酷狗, 助手响应: 我还在学习中，这个问题有点难倒我了。
+2025-12-04 18:45:05,442 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 打开酷狗音乐
+2025-12-04 18:45:05,442 - src.nlp.nlp_processor - INFO - _process_internal方法被调用，输入文本: 打开酷狗音乐
+2025-12-04 18:45:05,442 - src.nlp.nlp_processor - INFO - 文本预处理结果: 打开酷狗音乐
+2025-12-04 18:45:05,444 - src.nlp.nlp_processor - INFO - 意图识别结果: music
+2025-12-04 18:45:05,444 - src.nlp.nlp_processor - INFO - 实体提取结果: [('app_name', '酷狗'), ('app_name', '酷狗音乐')]
+2025-12-04 18:45:05,444 - src.nlp.nlp_processor - INFO - 实体提取结果: [('app_name', '酷狗'), ('app_name', '酷狗音乐')]
+2025-12-04 18:45:05,444 - src.nlp.nlp_processor - INFO - _process_internal方法返回结果: ('music', [('app_name', '酷狗'), ('app_name', '酷狗音乐')]), 类型: <class 'tuple'>
+2025-12-04 18:45:05,444 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: music, 实体: [('app_name', '酷狗'), ('app_name', '酷狗音乐')], 会话ID: fc22cbd2-8240-45f9-8cc7-a5cec769390c
+2025-12-04 18:45:05,444 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': 'fc22cbd2-8240-45f9-8cc7-a5cec769390c', 'last_intent': 'music', 'last_entities': [('app_name', '酷狗'), ('app_name', '酷狗音乐')], 'last_response': '抱歉，音乐播放功能正在开发中', 'topic': None, 'conversation_turns': 2, 'pending_questions': [], 'memory': {'preferred_city': None, 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': ['music'], 'user_name': None}, 'conversation_topic': 'music', 'topic_turns': 1, 'start_time': datetime.datetime(2025, 12, 4, 18, 44, 32, 480665)}
+2025-12-04 18:45:05,447 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-04 18:45:05,447 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 抱歉，音乐播放功能正在开发中
+2025-12-04 18:45:05,467 - src.ui.simple_gui - INFO - 用户输入: 打开酷狗音乐, 助手响应: 抱歉，音乐播放功能正在开发中
+2025-12-04 18:45:14,430 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 打开B站
+2025-12-04 18:45:14,430 - src.nlp.nlp_processor - INFO - _process_internal方法被调用，输入文本: 打开B站
+2025-12-04 18:45:14,430 - src.nlp.nlp_processor - INFO - 文本预处理结果: 打开b站
+2025-12-04 18:45:14,430 - src.nlp.nlp_processor - INFO - 意图识别结果: None
+2025-12-04 18:45:14,430 - src.nlp.nlp_processor - INFO - 实体提取结果: [('app_name', 'b站'), ('command', 'b')]
+2025-12-04 18:45:14,430 - src.nlp.nlp_processor - INFO - 实体提取结果: [('app_name', 'b站'), ('command', 'b')]
+2025-12-04 18:45:14,430 - src.nlp.nlp_processor - INFO - _process_internal方法返回结果: (None, [('app_name', 'b站'), ('command', 'b')]), 类型: <class 'tuple'>
+2025-12-04 18:45:14,430 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: None, 实体: [('app_name', 'b站'), ('command', 'b')], 会话ID: fc22cbd2-8240-45f9-8cc7-a5cec769390c
+2025-12-04 18:45:14,430 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': 'fc22cbd2-8240-45f9-8cc7-a5cec769390c', 'last_intent': None, 'last_entities': [('app_name', 'b站'), ('command', 'b')], 'last_response': '我还在学习中，这个问题有点难倒我了。', 'topic': None, 'conversation_turns': 3, 'pending_questions': [], 'memory': {'preferred_city': None, 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': ['music'], 'user_name': None}, 'conversation_topic': 'music', 'topic_turns': 2, 'start_time': datetime.datetime(2025, 12, 4, 18, 44, 32, 480665)}
+2025-12-04 18:45:14,430 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-04 18:45:14,445 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 我还在学习中，这个问题有点难倒我了。
+2025-12-04 18:45:14,453 - src.ui.simple_gui - INFO - 用户输入: 打开B站, 助手响应: 我还在学习中，这个问题有点难倒我了。
+2025-12-04 18:45:24,968 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 播放音乐
+2025-12-04 18:45:24,968 - src.nlp.nlp_processor - INFO - _process_internal方法被调用，输入文本: 播放音乐
+2025-12-04 18:45:24,968 - src.nlp.nlp_processor - INFO - 文本预处理结果: 播放音乐
+2025-12-04 18:45:24,968 - src.nlp.nlp_processor - INFO - 意图识别结果: music
+2025-12-04 18:45:24,968 - src.nlp.nlp_processor - INFO - 实体提取结果: []
+2025-12-04 18:45:24,968 - src.nlp.nlp_processor - INFO - 实体提取结果: []
+2025-12-04 18:45:24,968 - src.nlp.nlp_processor - INFO - _process_internal方法返回结果: ('music', []), 类型: <class 'tuple'>
+2025-12-04 18:45:24,968 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: music, 实体: [], 会话ID: fc22cbd2-8240-45f9-8cc7-a5cec769390c
+2025-12-04 18:45:24,968 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': 'fc22cbd2-8240-45f9-8cc7-a5cec769390c', 'last_intent': 'music', 'last_entities': [], 'last_response': '抱歉，音乐播放功能正在开发中', 'topic': None, 'conversation_turns': 4, 'pending_questions': [], 'memory': {'preferred_city': None, 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': ['music'], 'user_name': None}, 'conversation_topic': 'music', 'topic_turns': 3, 'start_time': datetime.datetime(2025, 12, 4, 18, 44, 32, 480665)}
+2025-12-04 18:45:24,984 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-04 18:45:24,984 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 抱歉，音乐播放功能正在开发中
+2025-12-04 18:45:24,998 - src.ui.simple_gui - INFO - 用户输入: 播放音乐, 助手响应: 抱歉，音乐播放功能正在开发中
+2025-12-04 18:46:48,630 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 18:46:49,388 - src.security.security_manager - INFO - 用户角色信息加载完成
+2025-12-04 18:46:49,388 - src.dialogue_manager.dialogue_manager - INFO - 对话历史数据库初始化成功
+2025-12-04 18:46:49,880 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:46:49,880 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:46:49,880 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:46:49,880 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:47:15,671 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 18:47:16,460 - src.security.security_manager - INFO - 用户角色信息加载完成
+2025-12-04 18:47:16,460 - src.dialogue_manager.dialogue_manager - INFO - 对话历史数据库初始化成功
+2025-12-04 18:47:16,937 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:47:16,937 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:47:16,937 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:47:16,937 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:54:54,882 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 18:54:55,652 - src.security.security_manager - INFO - 用户角色信息加载完成
+2025-12-04 18:54:55,652 - src.dialogue_manager.dialogue_manager - INFO - 对话历史数据库初始化成功
+2025-12-04 18:54:56,151 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:54:56,151 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:54:56,151 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:54:56,151 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:56:26,643 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-04 18:56:27,383 - src.security.security_manager - INFO - 用户角色信息加载完成
+2025-12-04 18:56:27,383 - src.dialogue_manager.dialogue_manager - INFO - 对话历史数据库初始化成功
+2025-12-04 18:56:27,873 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:56:27,873 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-04 18:56:27,873 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-04 18:56:27,873 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-05 21:41:51,414 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-05 21:41:52,484 - src.security.security_manager - INFO - 用户角色信息加载完成
+2025-12-05 21:41:52,485 - src.dialogue_manager.dialogue_manager - INFO - 对话历史数据库初始化成功
+2025-12-05 21:41:53,730 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-05 21:41:53,730 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-05 21:41:53,731 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功（不包含spacy依赖）
+2025-12-05 21:41:53,732 - src.nlp.nlp_processor - INFO - NLP处理器初始化成功
+2025-12-05 21:42:16,261 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 现在南宁的天气是
+2025-12-05 21:42:16,261 - src.nlp.nlp_processor - INFO - _process_internal方法被调用，输入文本: 现在南宁的天气是
+2025-12-05 21:42:16,261 - src.nlp.nlp_processor - INFO - 文本预处理结果: 现在南宁的天气是
+2025-12-05 21:42:16,262 - src.nlp.nlp_processor - INFO - 规则匹配成功，意图: weather, 模式: 天气
+2025-12-05 21:42:16,262 - src.nlp.nlp_processor - INFO - 意图识别结果: weather
+2025-12-05 21:42:16,263 - src.nlp.nlp_processor - INFO - 实体提取结果: [('city', '南宁')]
+2025-12-05 21:42:16,263 - src.nlp.nlp_processor - INFO - 实体提取结果: [('city', '南宁')]
+2025-12-05 21:42:16,263 - src.nlp.nlp_processor - INFO - _process_internal方法返回结果: ('weather', [('city', '南宁')]), 类型: <class 'tuple'>
+2025-12-05 21:42:16,263 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: weather, 实体: [('city', '南宁')], 会话ID: 9c257579-bb45-4043-ac5e-c0a9f7958404
+2025-12-05 21:42:16,263 - src.api_integration.api_integrator - INFO - 获取天气信息 - 城市: 南宁, 时间: None
+2025-12-05 21:42:16,717 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': '9c257579-bb45-4043-ac5e-c0a9f7958404', 'last_intent': 'weather', 'last_entities': [('city', '南宁')], 'last_response': '南宁今日5日（今天）天气：多云，温度：13℃，风力：<3级', 'topic': None, 'conversation_turns': 1, 'pending_questions': [], 'memory': {'preferred_city': '南宁', 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': ['weather'], 'user_name': None}, 'conversation_topic': 'weather', 'topic_turns': 1, 'start_time': datetime.datetime(2025, 12, 5, 21, 41, 52, 487786)}
+2025-12-05 21:42:16,799 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-05 21:42:16,799 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 南宁今日5日（今天）天气：多云，温度：13℃，风力：<3级
+2025-12-05 21:42:16,814 - src.ui.simple_gui - INFO - 用户输入: 现在南宁的天气是, 助手响应: 南宁今日5日（今天）天气：多云，温度：13℃，风力：<3级
+2025-12-05 21:42:25,920 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 今天的气温是
+2025-12-05 21:42:25,920 - src.nlp.nlp_processor - INFO - _process_internal方法被调用，输入文本: 今天的气温是
+2025-12-05 21:42:25,920 - src.nlp.nlp_processor - INFO - 文本预处理结果: 今天的气温是
+2025-12-05 21:42:25,920 - src.nlp.nlp_processor - INFO - 规则匹配成功，意图: weather, 模式: 气温
+2025-12-05 21:42:25,920 - src.nlp.nlp_processor - INFO - 意图识别结果: weather
+2025-12-05 21:42:25,921 - src.nlp.nlp_processor - INFO - 实体提取结果: [('time', '今天')]
+2025-12-05 21:42:25,921 - src.nlp.nlp_processor - INFO - 实体提取结果: [('time', '今天')]
+2025-12-05 21:42:25,921 - src.nlp.nlp_processor - INFO - _process_internal方法返回结果: ('weather', [('time', '今天')]), 类型: <class 'tuple'>
+2025-12-05 21:42:25,921 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: weather, 实体: [('time', '今天'), ('city', '南宁')], 会话ID: 9c257579-bb45-4043-ac5e-c0a9f7958404
+2025-12-05 21:42:25,921 - src.api_integration.api_integrator - INFO - 获取天气信息 - 城市: 南宁, 时间: 今天
+2025-12-05 21:42:26,039 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': '9c257579-bb45-4043-ac5e-c0a9f7958404', 'last_intent': 'weather', 'last_entities': [('time', '今天'), ('city', '南宁')], 'last_response': '南宁今日5日（今天）天气：多云，温度：13℃，风力：<3级', 'topic': None, 'conversation_turns': 2, 'pending_questions': [], 'memory': {'preferred_city': '南宁', 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': ['weather'], 'user_name': None}, 'conversation_topic': 'weather', 'topic_turns': 2, 'start_time': datetime.datetime(2025, 12, 5, 21, 41, 52, 487786)}
+2025-12-05 21:42:26,052 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-05 21:42:26,052 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 南宁今日5日（今天）天气：多云，温度：13℃，风力：<3级
+2025-12-05 21:42:26,060 - src.ui.simple_gui - INFO - 用户输入: 今天的气温是, 助手响应: 南宁今日5日（今天）天气：多云，温度：13℃，风力：<3级
+2025-12-05 21:42:38,578 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 打开酷狗音乐
+2025-12-05 21:42:38,578 - src.nlp.nlp_processor - INFO - _process_internal方法被调用，输入文本: 打开酷狗音乐
+2025-12-05 21:42:38,578 - src.nlp.nlp_processor - INFO - 文本预处理结果: 打开酷狗音乐
+2025-12-05 21:42:38,578 - src.nlp.nlp_processor - INFO - 规则匹配成功，意图: music, 模式: 音乐
+2025-12-05 21:42:38,578 - src.nlp.nlp_processor - INFO - 意图识别结果: music
+2025-12-05 21:42:38,578 - src.nlp.nlp_processor - INFO - 实体提取结果: [('app_name', '酷狗'), ('app_name', '酷狗音乐')]
+2025-12-05 21:42:38,578 - src.nlp.nlp_processor - INFO - 实体提取结果: [('app_name', '酷狗'), ('app_name', '酷狗音乐')]
+2025-12-05 21:42:38,578 - src.nlp.nlp_processor - INFO - _process_internal方法返回结果: ('music', [('app_name', '酷狗'), ('app_name', '酷狗音乐')]), 类型: <class 'tuple'>
+2025-12-05 21:42:38,579 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: music, 实体: [('app_name', '酷狗'), ('app_name', '酷狗音乐')], 会话ID: 9c257579-bb45-4043-ac5e-c0a9f7958404
+2025-12-05 21:42:38,579 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': '9c257579-bb45-4043-ac5e-c0a9f7958404', 'last_intent': 'music', 'last_entities': [('app_name', '酷狗'), ('app_name', '酷狗音乐')], 'last_response': '请告诉我您想要播放的音乐名称', 'topic': None, 'conversation_turns': 3, 'pending_questions': [], 'memory': {'preferred_city': '南宁', 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': ['weather', 'music'], 'user_name': None}, 'conversation_topic': 'music', 'topic_turns': 1, 'start_time': datetime.datetime(2025, 12, 5, 21, 41, 52, 487786)}
+2025-12-05 21:42:38,590 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-05 21:42:38,590 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 请告诉我您想要播放的音乐名称
+2025-12-05 21:42:38,606 - src.ui.simple_gui - INFO - 用户输入: 打开酷狗音乐, 助手响应: 请告诉我您想要播放的音乐名称
+2025-12-05 21:42:48,643 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 游京
+2025-12-05 21:42:48,643 - src.nlp.nlp_processor - INFO - _process_internal方法被调用，输入文本: 游京
+2025-12-05 21:42:48,643 - src.nlp.nlp_processor - INFO - 文本预处理结果: 游京
+2025-12-05 21:42:48,645 - src.nlp.nlp_processor - INFO - 意图识别失败，输入文本: 游京
+2025-12-05 21:42:48,645 - src.nlp.nlp_processor - INFO - 意图识别结果: None
+2025-12-05 21:42:48,645 - src.nlp.nlp_processor - INFO - 实体提取结果: []
+2025-12-05 21:42:48,645 - src.nlp.nlp_processor - INFO - 实体提取结果: []
+2025-12-05 21:42:48,645 - src.nlp.nlp_processor - INFO - _process_internal方法返回结果: (None, []), 类型: <class 'tuple'>
+2025-12-05 21:42:48,645 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: None, 实体: [], 会话ID: 9c257579-bb45-4043-ac5e-c0a9f7958404
+2025-12-05 21:42:48,645 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': '9c257579-bb45-4043-ac5e-c0a9f7958404', 'last_intent': None, 'last_entities': [], 'last_response': '我还在学习中，这个问题有点难倒我了。', 'topic': None, 'conversation_turns': 4, 'pending_questions': [], 'memory': {'preferred_city': '南宁', 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': ['weather', 'music'], 'user_name': None}, 'conversation_topic': 'music', 'topic_turns': 2, 'start_time': datetime.datetime(2025, 12, 5, 21, 41, 52, 487786)}
+2025-12-05 21:42:48,656 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-05 21:42:48,656 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 我还在学习中，这个问题有点难倒我了。
+2025-12-05 21:42:48,670 - src.ui.simple_gui - INFO - 用户输入: 游京, 助手响应: 我还在学习中，这个问题有点难倒我了。
+2025-12-05 21:43:03,668 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 打开酷狗播放游京
+2025-12-05 21:43:03,668 - src.nlp.nlp_processor - INFO - _process_internal方法被调用，输入文本: 打开酷狗播放游京
+2025-12-05 21:43:03,668 - src.nlp.nlp_processor - INFO - 文本预处理结果: 打开酷狗播放游京
+2025-12-05 21:43:03,668 - src.nlp.nlp_processor - INFO - 规则匹配成功，意图: music, 模式: 播放
+2025-12-05 21:43:03,668 - src.nlp.nlp_processor - INFO - 意图识别结果: music
+2025-12-05 21:43:03,668 - src.nlp.nlp_processor - INFO - 实体提取结果: [('app_name', '酷狗')]
+2025-12-05 21:43:03,668 - src.nlp.nlp_processor - INFO - 实体提取结果: [('app_name', '酷狗')]
+2025-12-05 21:43:03,668 - src.nlp.nlp_processor - INFO - _process_internal方法返回结果: ('music', [('app_name', '酷狗')]), 类型: <class 'tuple'>
+2025-12-05 21:43:03,668 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: music, 实体: [('app_name', '酷狗')], 会话ID: 9c257579-bb45-4043-ac5e-c0a9f7958404
+2025-12-05 21:43:03,668 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': '9c257579-bb45-4043-ac5e-c0a9f7958404', 'last_intent': 'music', 'last_entities': [('app_name', '酷狗')], 'last_response': '请告诉我您想要播放的音乐名称', 'topic': None, 'conversation_turns': 5, 'pending_questions': [], 'memory': {'preferred_city': '南宁', 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': ['weather', 'music'], 'user_name': None}, 'conversation_topic': 'music', 'topic_turns': 3, 'start_time': datetime.datetime(2025, 12, 5, 21, 41, 52, 487786)}
+2025-12-05 21:43:03,680 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-05 21:43:03,680 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 请告诉我您想要播放的音乐名称
+2025-12-05 21:43:03,688 - src.ui.simple_gui - INFO - 用户输入: 打开酷狗播放游京, 助手响应: 请告诉我您想要播放的音乐名称
+2025-12-05 21:43:22,797 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 我想播放的音乐是游京
+2025-12-05 21:43:22,797 - src.nlp.nlp_processor - INFO - _process_internal方法被调用，输入文本: 我想播放的音乐是游京
+2025-12-05 21:43:22,797 - src.nlp.nlp_processor - INFO - 文本预处理结果: 我想播放的音乐是游京
+2025-12-05 21:43:22,797 - src.nlp.nlp_processor - INFO - 规则匹配成功，意图: music, 模式: 音乐
+2025-12-05 21:43:22,797 - src.nlp.nlp_processor - INFO - 意图识别结果: music
+2025-12-05 21:43:22,797 - src.nlp.nlp_processor - INFO - 实体提取结果: []
+2025-12-05 21:43:22,797 - src.nlp.nlp_processor - INFO - 实体提取结果: []
+2025-12-05 21:43:22,797 - src.nlp.nlp_processor - INFO - _process_internal方法返回结果: ('music', []), 类型: <class 'tuple'>
+2025-12-05 21:43:22,797 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: music, 实体: [], 会话ID: 9c257579-bb45-4043-ac5e-c0a9f7958404
+2025-12-05 21:43:22,797 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': '9c257579-bb45-4043-ac5e-c0a9f7958404', 'last_intent': 'music', 'last_entities': [], 'last_response': '请告诉我您想要播放的音乐名称', 'topic': None, 'conversation_turns': 6, 'pending_questions': [], 'memory': {'preferred_city': '南宁', 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': ['weather', 'music'], 'user_name': None}, 'conversation_topic': 'music', 'topic_turns': 4, 'start_time': datetime.datetime(2025, 12, 5, 21, 41, 52, 487786)}
+2025-12-05 21:43:22,808 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-05 21:43:22,808 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 请告诉我您想要播放的音乐名称
+2025-12-05 21:43:22,820 - src.ui.simple_gui - INFO - 用户输入: 我想播放的音乐是游京, 助手响应: 请告诉我您想要播放的音乐名称
+2025-12-05 22:02:59,569 - src.ui.simple_gui - INFO - 启动语音助手GUI
+2025-12-05 22:03:00,349 - src.security.security_manager - INFO - 用户角色信息加载完成
+2025-12-05 22:03:00,350 - src.dialogue_manager.dialogue_manager - INFO - 对话历史数据库初始化成功
+2025-12-05 22:03:00,352 - jieba - DEBUG - Building prefix dict from the default dictionary ...
+2025-12-05 22:03:00,353 - jieba - DEBUG - Loading model from cache C:\Users\Ln\AppData\Local\Temp\jieba.cache
+2025-12-05 22:03:00,770 - jieba - DEBUG - Loading model cost 0.418 seconds.
+2025-12-05 22:03:00,770 - jieba - DEBUG - Prefix dict has been built successfully.
+2025-12-05 22:03:01,280 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功
+2025-12-05 22:03:01,281 - src.nlp.nlp_processor - INFO - 增强版NLP处理器初始化成功
+2025-12-05 22:03:01,283 - src.nlp.nlp_processor - INFO - 机器学习模型初始化成功
+2025-12-05 22:03:01,283 - src.nlp.nlp_processor - INFO - 增强版NLP处理器初始化成功
+2025-12-05 22:04:08,409 - src.dialogue_manager.dialogue_manager - INFO - 用户输入: 打开酷狗播放游京
+2025-12-05 22:04:08,413 - src.dialogue_manager.dialogue_manager - INFO - 生成响应 - 意图: open_application, 实体: [('app_name', '酷狗')], 会话ID: 85c1c64a-f1f0-4fe0-88db-9f76fea8e8a1
+2025-12-05 22:04:08,413 - src.dialogue_manager.dialogue_manager - INFO - 准备打开应用: 酷狗
+2025-12-05 22:04:08,413 - src.api_integration.api_integrator - INFO - 打开应用程序 - 名称: 酷狗
+2025-12-05 22:04:08,413 - src.security.security_manager - INFO - 命令open_application未定义权限，默认允许执行
+2025-12-05 22:04:11,084 - src.api_integration.local_operations - ERROR - 打开应用程序失败: Command 'start "" "KuGou"' returned non-zero exit status 1.
+2025-12-05 22:04:11,084 - src.dialogue_manager.dialogue_manager - INFO - 更新后的对话上下文: {'user_id': 'default', 'session_id': '85c1c64a-f1f0-4fe0-88db-9f76fea8e8a1', 'last_intent': 'open_application', 'last_entities': [('app_name', '酷狗')], 'last_response': '抱歉，打开应用程序时出错：Command \'start "" "KuGou"\' returned non-zero exit status 1.', 'topic': None, 'conversation_turns': 1, 'pending_questions': [], 'memory': {'preferred_city': None, 'preferred_language': 'zh-CN', 'favorite_topics': [], 'recent_queries': ['open_application'], 'user_name': None}, 'conversation_topic': 'open_application', 'topic_turns': 1, 'start_time': datetime.datetime(2025, 12, 5, 22, 3, 0, 352859)}
+2025-12-05 22:04:11,135 - src.dialogue_manager.dialogue_manager - INFO - 已清理 1 条旧对话历史记录
+2025-12-05 22:04:11,135 - src.dialogue_manager.dialogue_manager - INFO - 生成的响应: 抱歉，打开应用程序时出错：Command 'start "" "KuGou"' returned non-zero exit status 1.
+2025-12-05 22:04:11,144 - src.ui.simple_gui - INFO - 用户输入: 打开酷狗播放游京, 助手响应: 抱歉，打开应用程序时出错：Command 'start "" "KuGou"' returned non-zero exit status 1.
