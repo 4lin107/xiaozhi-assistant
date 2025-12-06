@@ -64,7 +64,7 @@ android.accept_sdk_license = True
 # presplash.filename = %(source.dir)s/presplash.png
 
 # 应用主题
-android.theme = @android:style/Theme.Material.Light.NoActionBar
+android.theme = @android:style/Theme.NoTitleBar
 
 # 调试模式
 android.debug = True
@@ -80,6 +80,12 @@ android.gradle_dependencies =
 
 # 启用AndroidX
 android.enable_androidx = True
+
+# 跳过 Gradle 更新
+android.skip_update = False
+
+# 添加 Gradle 选项
+android.add_gradle_repositories = google(),mavenCentral()
 
 [buildozer]
 
