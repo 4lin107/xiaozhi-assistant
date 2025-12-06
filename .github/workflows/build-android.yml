@@ -72,12 +72,19 @@ jobs:
         BUILDOZER_WARN_ON_ROOT: 0
         GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.parallel=false"
     
+    - name: Find and copy APK
+      run: |
+        mkdir -p dist
+        find .buildozer -name "*.apk" -exec cp {} dist/ \;
+        ls -la dist/
+    
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
       with:
         name: xiaozhi-android-apk
         path: dist/*.apk
         retention-days: 30
+        if-no-files-found: warn
     
     - name: Create Release (on tag)
       if: startsWith(github.ref, 'refs/tags/')
