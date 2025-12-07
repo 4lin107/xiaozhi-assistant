@@ -23,30 +23,66 @@ from kivy.uix.scrollview import ScrollView
 from kivy.clock import Clock
 from kivy.core.window import Window
 from kivy.lang import Builder
+from kivy.core.text import LabelBase
 
 # 配置日志
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# 简化版 Kivy 布局
-KV = '''
+# 注册中文字体（Android 系统字体路径）
+FONT_PATHS = [
+    '/system/fonts/NotoSansCJK-Regular.ttc',
+    '/system/fonts/DroidSansFallback.ttf',
+    '/system/fonts/NotoSansSC-Regular.otf',
+    '/system/fonts/Roboto-Regular.ttf',
+]
+
+CHINESE_FONT = None
+for font_path in FONT_PATHS:
+    if os.path.exists(font_path):
+        try:
+            LabelBase.register(name='ChineseFont', fn_regular=font_path)
+            CHINESE_FONT = 'ChineseFont'
+            logger.info(f"使用字体: {font_path}")
+            break
+        except Exception as e:
+            logger.warning(f"字体注册失败 {font_path}: {e}")
+
+# 如果没找到中文字体，使用默认
+if not CHINESE_FONT:
+    CHINESE_FONT = 'Roboto'
+    logger.warning("未找到中文字体，使用默认字体")
+
+# Kivy 布局 - 使用中文字体
+KV = f'''
+#:set chinese_font "{CHINESE_FONT}"
+
 BoxLayout:
     orientation: 'vertical'
     padding: 10
     spacing: 10
+    canvas.before:
+        Color:
+            rgba: 0.95, 0.95, 0.95, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
     
     Label:
-        text: "小智语音助手"
+        text: "Xiaozhi Assistant"
+        font_name: chinese_font
         size_hint_y: None
         height: 50
-        font_size: 24
-        bold: True
+        font_size: 22
+        color: 0.2, 0.2, 0.2, 1
     
     Label:
         id: status_label
-        text: "已就绪"
+        text: "Ready"
+        font_name: chinese_font
         size_hint_y: None
-        height: 30
+        height: 25
+        font_size: 14
         color: 0.5, 0.5, 0.5, 1
     
     ScrollView:
@@ -69,88 +105,74 @@ BoxLayout:
         
         TextInput:
             id: input_field
-            hint_text: "输入您的问题..."
+            hint_text: "Type here..."
+            font_name: chinese_font
             multiline: False
             size_hint_x: 0.75
+            font_size: 16
             on_text_validate: app.send_message()
         
         Button:
-            text: "发送"
+            text: "Send"
+            font_name: chinese_font
             size_hint_x: 0.25
+            font_size: 16
+            background_color: 0.2, 0.6, 1, 1
             on_release: app.send_message()
 '''
 
 
 class SimpleAssistant:
-    """简化版对话助手 - 无外部依赖"""
+    """Simple chat assistant"""
     
     def __init__(self):
-        self.greetings = ["你好！", "您好！", "嗨！", "很高兴见到你！"]
-        self.jokes = [
-            "为什么程序员总是分不清万圣节和圣诞节？因为 Oct 31 = Dec 25",
-            "程序员最讨厌什么？别人说他的代码有bug，更讨厌别人说他的代码没有bug",
-            "世界上最遥远的距离不是生与死，而是你写的代码在我电脑上跑不起来",
-            "为什么程序员喜欢黑暗模式？因为光明会吸引bug",
-        ]
-        self.stories = [
-            "从前有座山，山里有座庙，庙里有个老和尚在给小和尚讲故事...",
-            "很久很久以前，有一个勤劳的农夫，他每天都辛勤地耕作...",
-        ]
+        pass
     
     def get_response(self, text):
-        """根据用户输入生成回复"""
         text = text.lower().strip()
         
-        # 问候
-        if any(w in text for w in ['你好', '您好', '嗨', 'hi', 'hello']):
-            return random.choice(self.greetings) + "我是小智，有什么可以帮你的吗？"
+        # Greetings
+        if any(w in text for w in ['hi', 'hello', 'hey']):
+            return "Hello! I'm Xiaozhi. How can I help you?"
         
-        # 时间
-        if any(w in text for w in ['时间', '几点', '现在']):
+        # Time
+        if any(w in text for w in ['time', 'clock', 'hour']):
             now = datetime.now()
-            return f"现在是 {now.strftime('%Y年%m月%d日 %H:%M:%S')}"
+            return f"Current time: {now.strftime('%Y-%m-%d %H:%M:%S')}"
         
-        # 日期
-        if any(w in text for w in ['日期', '今天', '星期']):
+        # Date
+        if any(w in text for w in ['date', 'today', 'day']):
             now = datetime.now()
-            weekdays = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日']
-            return f"今天是 {now.strftime('%Y年%m月%d日')} {weekdays[now.weekday()]}"
+            weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+            return f"Today is {now.strftime('%Y-%m-%d')} {weekdays[now.weekday()]}"
         
-        # 笑话
-        if any(w in text for w in ['笑话', '搞笑', '开心']):
-            return random.choice(self.jokes)
+        # Joke
+        if any(w in text for w in ['joke', 'funny', 'laugh']):
+            jokes = [
+                "Why do programmers prefer dark mode? Because light attracts bugs!",
+                "There are only 10 types of people: those who understand binary and those who don't.",
+                "A SQL query walks into a bar, walks up to two tables and asks: Can I join you?",
+            ]
+            return random.choice(jokes)
         
-        # 故事
-        if any(w in text for w in ['故事', '讲个']):
-            return random.choice(self.stories)
+        # Help
+        if any(w in text for w in ['help', 'what can you do', 'feature']):
+            return "I can:\n- Tell you time and date\n- Tell jokes\n- Chat with you\n\nTry: 'what time is it' or 'tell me a joke'"
         
-        # 天气（简化回复）
-        if any(w in text for w in ['天气', '温度', '下雨']):
-            return "抱歉，天气查询功能需要网络支持。请确保网络连接正常后重试。"
+        # Thanks
+        if any(w in text for w in ['thank', 'thanks']):
+            return "You're welcome!"
         
-        # 帮助
-        if any(w in text for w in ['帮助', '功能', '能做什么', 'help']):
-            return "我可以：\n• 告诉你时间和日期\n• 讲笑话\n• 讲故事\n• 和你聊天"
+        # Bye
+        if any(w in text for w in ['bye', 'goodbye', 'see you']):
+            return "Goodbye! See you next time!"
         
-        # 感谢
-        if any(w in text for w in ['谢谢', '感谢', 'thanks']):
-            return "不客气！很高兴能帮到你~"
-        
-        # 再见
-        if any(w in text for w in ['再见', '拜拜', 'bye']):
-            return "再见！期待下次和你聊天~"
-        
-        # 默认回复
-        defaults = [
-            "我理解你说的是：" + text[:20] + "...\n你可以问我时间、让我讲笑话或故事哦~",
-            "嗯，我在听。你可以试试问我'现在几点'或者'讲个笑话'",
-            "有什么我可以帮你的吗？试试说'帮助'看看我能做什么~",
-        ]
-        return random.choice(defaults)
+        # Default
+        return f"I heard: {text[:30]}...\nTry asking 'what time is it' or 'tell me a joke'"
 
 
 class MessageBubble(BoxLayout):
-    """消息气泡"""
+    """Message bubble widget"""
     def __init__(self, text, is_user=False, **kwargs):
         super().__init__(**kwargs)
         self.orientation = 'horizontal'
@@ -160,40 +182,42 @@ class MessageBubble(BoxLayout):
         
         label = Label(
             text=text,
-            text_size=(Window.width * 0.7, None),
+            font_name=CHINESE_FONT,
+            text_size=(Window.width * 0.65, None),
             size_hint=(0.8, None),
             halign='left' if not is_user else 'right',
             valign='middle',
+            font_size=15,
         )
         label.bind(texture_size=lambda *x: setattr(label, 'height', max(40, label.texture_size[1] + 20)))
         label.bind(height=lambda *x: setattr(self, 'height', label.height + 10))
         
         if is_user:
-            label.color = (0.2, 0.6, 1, 1)
+            label.color = (0.2, 0.5, 0.9, 1)
             self.add_widget(BoxLayout(size_hint_x=0.2))
             self.add_widget(label)
         else:
-            label.color = (0.3, 0.3, 0.3, 1)
+            label.color = (0.2, 0.2, 0.2, 1)
             self.add_widget(label)
             self.add_widget(BoxLayout(size_hint_x=0.2))
 
 
 class XiaozhiApp(App):
-    """小智语音助手 App"""
+    """Xiaozhi Voice Assistant App"""
     
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.assistant = SimpleAssistant()
     
     def build(self):
-        self.title = "小智语音助手"
+        self.title = "Xiaozhi Assistant"
         self.root = Builder.load_string(KV)
         Clock.schedule_once(self.show_welcome, 0.5)
         return self.root
     
     def show_welcome(self, dt):
-        self.add_message("你好！我是小智，您的智能助手~", is_user=False)
-        self.add_message("你可以问我时间、让我讲笑话，或者说'帮助'看看我能做什么", is_user=False)
+        self.add_message("Hello! I'm Xiaozhi, your assistant.", is_user=False)
+        self.add_message("Try: 'what time is it' or 'tell me a joke'", is_user=False)
     
     def add_message(self, text, is_user=False):
         chat_layout = self.root.ids.chat_layout
@@ -211,7 +235,6 @@ class XiaozhiApp(App):
         self.add_message(text, is_user=True)
         input_field.text = ''
         
-        # 获取回复
         response = self.assistant.get_response(text)
         Clock.schedule_once(lambda dt: self.add_message(response, is_user=False), 0.3)
 
