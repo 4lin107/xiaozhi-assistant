@@ -15,8 +15,8 @@ source.dir = .
 # 包含的文件类型
 source.include_exts = py,png,jpg,kv,atlas,txt,db
 
-# 包含的目录
-source.include_patterns = src/**/*,config/*,data/*,mobile_app.py
+# 包含的目录（简化版只需要 main.py）
+source.include_patterns = main.py
 
 # 排除的目录
 source.exclude_dirs = .buildozer,.git,__pycache__,bin,dist,venv,.kiro
@@ -27,8 +27,8 @@ source.exclude_patterns = *.pyc,*.pyo,*.log,test_*.py
 # 应用版本
 version = 2.0.0
 
-# 依赖项
-requirements = python3,kivy==2.2.1,requests,certifi,charset-normalizer,idna,urllib3,plyer,beautifulsoup4,soupsieve,jieba
+# 依赖项（最小化依赖）
+requirements = python3,kivy
 
 # 屏幕方向
 orientation = portrait
@@ -36,8 +36,8 @@ orientation = portrait
 # 全屏
 fullscreen = 0
 
-# Android权限
-android.permissions = INTERNET,RECORD_AUDIO,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE,ACCESS_NETWORK_STATE
+# Android权限（简化版只需要网络）
+android.permissions = INTERNET
 
 # Android API版本
 android.api = 31
