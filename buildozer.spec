@@ -28,7 +28,8 @@ source.exclude_patterns = *.pyc,*.pyo,*.log,test_*.py
 version = 2.0.0
 
 # 依赖项 (精简版，减少网络下载)
-requirements = python3,kivy==2.2.1,requests,certifi,charset-normalizer,idna,urllib3,plyer
+requirements = python3,kivy==2.2.1,requests,certifi,charset-normalizer,idna,urllib3,plyer,beautifulsoup4,soupsieve,jieba
+
 
 # 屏幕方向
 orientation = portrait
