@@ -19,13 +19,13 @@ source.include_exts = py,png,jpg,kv,atlas,txt,db
 source.include_patterns = main.py
 
 # 排除的目录
-source.exclude_dirs = .buildozer,.git,__pycache__,bin,dist,venv,.kiro
+source.exclude_dirs = .buildozer,.git,__pycache__,bin,dist,venv,.kiro,src,config,data
 
 # 排除的文件
-source.exclude_patterns = *.pyc,*.pyo,*.log,test_*.py
+source.exclude_patterns = *.pyc,*.pyo,*.log,test_*.py,mobile_app.py
 
 # 应用版本
-version = 2.0.0
+version = 2.1.0
 
 # 依赖项（最小化依赖）
 requirements = python3,kivy
@@ -36,7 +36,7 @@ orientation = portrait
 # 全屏
 fullscreen = 0
 
-# Android权限（简化版只需要网络）
+# Android权限
 android.permissions = INTERNET
 
 # Android API版本
@@ -51,17 +51,11 @@ android.sdk = 31
 # Android NDK版本
 android.ndk = 25b
 
-# 架构 (单架构减少编译问题)
+# 架构
 android.archs = arm64-v8a
 
 # 是否接受SDK许可
 android.accept_sdk_license = True
-
-# 应用图标（可选）
-# icon.filename = %(source.dir)s/icon.png
-
-# 启动画面（可选）
-# presplash.filename = %(source.dir)s/presplash.png
 
 # 应用主题
 android.theme = @android:style/Theme.NoTitleBar
@@ -89,7 +83,7 @@ android.add_gradle_repositories = google(),mavenCentral()
 
 [buildozer]
 
-# 日志级别 (0 = error, 1 = info, 2 = debug)
+# 日志级别
 log_level = 2
 
 # root警告
