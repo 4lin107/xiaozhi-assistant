@@ -27,7 +27,7 @@ source.exclude_patterns = *.pyc,*.pyo,*.log,test_*.py
 # 应用版本
 version = 2.0.0
 
-# 依赖项 (精简版，减少网络下载)
+# 依赖项
 requirements = python3,kivy==2.2.1,requests,certifi,charset-normalizer,idna,urllib3,plyer
 
 # 屏幕方向
